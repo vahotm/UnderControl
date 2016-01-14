@@ -13,6 +13,7 @@
 		2007CB411C478E5C00E8B154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB3F1C478E5C00E8B154 /* Main.storyboard */; };
 		2007CB431C478E5C00E8B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB421C478E5C00E8B154 /* Assets.xcassets */; };
 		2007CB461C478E5C00E8B154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB441C478E5C00E8B154 /* LaunchScreen.storyboard */; };
+		C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		2007CB421C478E5C00E8B154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2007CB451C478E5C00E8B154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2007CB471C478E5D00E8B154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AF5F20CE1DD94DA1A836ACC /* Pods-Nest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30279169605DB52286435E2 /* Pods-Nest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191F2155DE05F76E84F10A0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2007CB2A1C478E5C00E8B154 = {
 			isa = PBXGroup;
 			children = (
 				2007CB351C478E5C00E8B154 /* Nest */,
 				2007CB341C478E5C00E8B154 /* Products */,
+				7D10876A14DC4D24391258B0 /* Pods */,
+				191F2155DE05F76E84F10A0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7D10876A14DC4D24391258B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AF5F20CE1DD94DA1A836ACC /* Pods-Nest.debug.xcconfig */,
+				A30279169605DB52286435E2 /* Pods-Nest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2007CB4A1C478E5D00E8B154 /* Build configuration list for PBXNativeTarget "Nest" */;
 			buildPhases = (
+				333FEAD3D27457BDD266EF28 /* Check Pods Manifest.lock */,
 				2007CB2F1C478E5C00E8B154 /* Sources */,
 				2007CB301C478E5C00E8B154 /* Frameworks */,
 				2007CB311C478E5C00E8B154 /* Resources */,
+				F635A93EE9D6E29A538A3741 /* Embed Pods Frameworks */,
+				5C27DCAE89A67758EBE5E965 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		333FEAD3D27457BDD266EF28 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C27DCAE89A67758EBE5E965 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nest/Pods-Nest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F635A93EE9D6E29A538A3741 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nest/Pods-Nest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2007CB2F1C478E5C00E8B154 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		2007CB4B1C478E5D00E8B154 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AF5F20CE1DD94DA1A836ACC /* Pods-Nest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nest/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		2007CB4C1C478E5D00E8B154 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30279169605DB52286435E2 /* Pods-Nest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nest/Info.plist;
@@ -298,6 +375,7 @@
 				2007CB4C1C478E5D00E8B154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
