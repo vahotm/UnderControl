@@ -13,6 +13,12 @@
 		2007CB431C478E5C00E8B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB421C478E5C00E8B154 /* Assets.xcassets */; };
 		2007CB461C478E5C00E8B154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB441C478E5C00E8B154 /* LaunchScreen.storyboard */; };
 		2007CB591C47C28000E8B154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB581C47C28000E8B154 /* ViewController.m */; };
+		2007CB611C47C43000E8B154 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB601C47C43000E8B154 /* LoginViewController.m */; };
+		2007CB661C47D24300E8B154 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB651C47D24300E8B154 /* AuthManager.m */; };
+		2007CB6D1C4805B000E8B154 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB6C1C4805B000E8B154 /* BaseModel.m */; };
+		2007CB741C4805E400E8B154 /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB731C4805E400E8B154 /* AccessToken.m */; };
+		2007CB7C1C480B0300E8B154 /* MTLJSONAdapter+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB7B1C480B0300E8B154 /* MTLJSONAdapter+Utils.m */; };
+		2007CB7F1C480ED300E8B154 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB7E1C480ED300E8B154 /* UIViewController+Alerts.m */; };
 		C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,18 @@
 		2007CB471C478E5D00E8B154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2007CB571C47C28000E8B154 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2007CB581C47C28000E8B154 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2007CB5F1C47C43000E8B154 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2007CB601C47C43000E8B154 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2007CB641C47D24300E8B154 /* AuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthManager.h; sourceTree = "<group>"; };
+		2007CB651C47D24300E8B154 /* AuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthManager.m; sourceTree = "<group>"; };
+		2007CB6B1C4805B000E8B154 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		2007CB6C1C4805B000E8B154 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		2007CB721C4805E400E8B154 /* AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessToken.h; sourceTree = "<group>"; };
+		2007CB731C4805E400E8B154 /* AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessToken.m; sourceTree = "<group>"; };
+		2007CB7A1C480B0300E8B154 /* MTLJSONAdapter+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTLJSONAdapter+Utils.h"; sourceTree = "<group>"; };
+		2007CB7B1C480B0300E8B154 /* MTLJSONAdapter+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTLJSONAdapter+Utils.m"; sourceTree = "<group>"; };
+		2007CB7D1C480ED300E8B154 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
+		2007CB7E1C480ED300E8B154 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
 		3AF5F20CE1DD94DA1A836ACC /* Pods-Nest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30279169605DB52286435E2 /* Pods-Nest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +91,10 @@
 		2007CB351C478E5C00E8B154 /* Nest */ = {
 			isa = PBXGroup;
 			children = (
+				2007CB761C480AD900E8B154 /* Categories */,
+				2007CB6A1C47E84100E8B154 /* Model */,
+				2007CB631C47D23C00E8B154 /* Auth */,
+				2007CB621C47D22D00E8B154 /* Network */,
 				2007CB5A1C47C28500E8B154 /* Storyboards */,
 				2007CB561C47C28000E8B154 /* ViewControllers */,
 				2007CB391C478E5C00E8B154 /* AppDelegate.h */,
@@ -97,6 +119,8 @@
 			children = (
 				2007CB571C47C28000E8B154 /* ViewController.h */,
 				2007CB581C47C28000E8B154 /* ViewController.m */,
+				2007CB5F1C47C43000E8B154 /* LoginViewController.h */,
+				2007CB601C47C43000E8B154 /* LoginViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +132,52 @@
 				2007CB441C478E5C00E8B154 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		2007CB621C47D22D00E8B154 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2007CB631C47D23C00E8B154 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2007CB641C47D24300E8B154 /* AuthManager.h */,
+				2007CB651C47D24300E8B154 /* AuthManager.m */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2007CB6A1C47E84100E8B154 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2007CB711C4805E400E8B154 /* Entities */,
+				2007CB6B1C4805B000E8B154 /* BaseModel.h */,
+				2007CB6C1C4805B000E8B154 /* BaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2007CB711C4805E400E8B154 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2007CB721C4805E400E8B154 /* AccessToken.h */,
+				2007CB731C4805E400E8B154 /* AccessToken.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2007CB761C480AD900E8B154 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2007CB7A1C480B0300E8B154 /* MTLJSONAdapter+Utils.h */,
+				2007CB7B1C480B0300E8B154 /* MTLJSONAdapter+Utils.m */,
+				2007CB7D1C480ED300E8B154 /* UIViewController+Alerts.h */,
+				2007CB7E1C480ED300E8B154 /* UIViewController+Alerts.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		7D10876A14DC4D24391258B0 /* Pods */ = {
@@ -240,7 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2007CB6D1C4805B000E8B154 /* BaseModel.m in Sources */,
 				2007CB591C47C28000E8B154 /* ViewController.m in Sources */,
+				2007CB661C47D24300E8B154 /* AuthManager.m in Sources */,
+				2007CB741C4805E400E8B154 /* AccessToken.m in Sources */,
+				2007CB611C47C43000E8B154 /* LoginViewController.m in Sources */,
+				2007CB7C1C480B0300E8B154 /* MTLJSONAdapter+Utils.m in Sources */,
+				2007CB7F1C480ED300E8B154 /* UIViewController+Alerts.m in Sources */,
 				2007CB3B1C478E5C00E8B154 /* AppDelegate.m in Sources */,
 				2007CB381C478E5C00E8B154 /* main.m in Sources */,
 			);

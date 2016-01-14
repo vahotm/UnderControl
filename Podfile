@@ -6,6 +6,9 @@
 target 'Nest' do
 
     pod 'AFNetworking'
+    pod 'RequestUtils', '~> 1.1'
+    pod 'Mantle'
+    pod 'SVProgressHUD'
     
 end
 
