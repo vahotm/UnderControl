@@ -24,7 +24,11 @@
 @property (nonatomic, strong) AccessToken *accessToken;
 
 #pragma mark - Request
-
 - (void)requestAuthTokenWithSuccess:(void (^)(NSString *authToken))success failure:(void (^)(NSError *error))failure;
+
+#pragma mark - Session
+- (BOOL)isValidSession;
+- (void)logout;
+
 
 @end

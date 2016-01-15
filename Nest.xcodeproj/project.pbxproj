@@ -12,13 +12,14 @@
 		2007CB411C478E5C00E8B154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB3F1C478E5C00E8B154 /* Main.storyboard */; };
 		2007CB431C478E5C00E8B154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB421C478E5C00E8B154 /* Assets.xcassets */; };
 		2007CB461C478E5C00E8B154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007CB441C478E5C00E8B154 /* LaunchScreen.storyboard */; };
-		2007CB591C47C28000E8B154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB581C47C28000E8B154 /* ViewController.m */; };
 		2007CB611C47C43000E8B154 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB601C47C43000E8B154 /* LoginViewController.m */; };
 		2007CB661C47D24300E8B154 /* AuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB651C47D24300E8B154 /* AuthManager.m */; };
 		2007CB6D1C4805B000E8B154 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB6C1C4805B000E8B154 /* BaseModel.m */; };
 		2007CB741C4805E400E8B154 /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB731C4805E400E8B154 /* AccessToken.m */; };
 		2007CB7C1C480B0300E8B154 /* MTLJSONAdapter+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB7B1C480B0300E8B154 /* MTLJSONAdapter+Utils.m */; };
 		2007CB7F1C480ED300E8B154 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB7E1C480ED300E8B154 /* UIViewController+Alerts.m */; };
+		2007CB821C48E5F300E8B154 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB811C48E5F300E8B154 /* MainTabBarController.m */; };
+		2007CB851C48E6BB00E8B154 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2007CB841C48E6BB00E8B154 /* ProfileViewController.m */; };
 		C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +32,6 @@
 		2007CB421C478E5C00E8B154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2007CB451C478E5C00E8B154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2007CB471C478E5D00E8B154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2007CB571C47C28000E8B154 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2007CB581C47C28000E8B154 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2007CB5F1C47C43000E8B154 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2007CB601C47C43000E8B154 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2007CB641C47D24300E8B154 /* AuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthManager.h; sourceTree = "<group>"; };
@@ -45,6 +44,11 @@
 		2007CB7B1C480B0300E8B154 /* MTLJSONAdapter+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTLJSONAdapter+Utils.m"; sourceTree = "<group>"; };
 		2007CB7D1C480ED300E8B154 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
 		2007CB7E1C480ED300E8B154 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
+		2007CB801C48E5F300E8B154 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		2007CB811C48E5F300E8B154 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		2007CB831C48E6BB00E8B154 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2007CB841C48E6BB00E8B154 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		2007CB871C48F00E00E8B154 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3AF5F20CE1DD94DA1A836ACC /* Pods-Nest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30279169605DB52286435E2 /* Pods-Nest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				2007CB421C478E5C00E8B154 /* Assets.xcassets */,
 				2007CB471C478E5D00E8B154 /* Info.plist */,
 				2007CB371C478E5C00E8B154 /* main.m */,
+				2007CB871C48F00E00E8B154 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,10 +122,12 @@
 		2007CB561C47C28000E8B154 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2007CB571C47C28000E8B154 /* ViewController.h */,
-				2007CB581C47C28000E8B154 /* ViewController.m */,
 				2007CB5F1C47C43000E8B154 /* LoginViewController.h */,
 				2007CB601C47C43000E8B154 /* LoginViewController.m */,
+				2007CB801C48E5F300E8B154 /* MainTabBarController.h */,
+				2007CB811C48E5F300E8B154 /* MainTabBarController.m */,
+				2007CB831C48E6BB00E8B154 /* ProfileViewController.h */,
+				2007CB841C48E6BB00E8B154 /* ProfileViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,12 +318,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2007CB6D1C4805B000E8B154 /* BaseModel.m in Sources */,
-				2007CB591C47C28000E8B154 /* ViewController.m in Sources */,
 				2007CB661C47D24300E8B154 /* AuthManager.m in Sources */,
 				2007CB741C4805E400E8B154 /* AccessToken.m in Sources */,
 				2007CB611C47C43000E8B154 /* LoginViewController.m in Sources */,
 				2007CB7C1C480B0300E8B154 /* MTLJSONAdapter+Utils.m in Sources */,
+				2007CB821C48E5F300E8B154 /* MainTabBarController.m in Sources */,
 				2007CB7F1C480ED300E8B154 /* UIViewController+Alerts.m in Sources */,
+				2007CB851C48E6BB00E8B154 /* ProfileViewController.m in Sources */,
 				2007CB3B1C478E5C00E8B154 /* AppDelegate.m in Sources */,
 				2007CB381C478E5C00E8B154 /* main.m in Sources */,
 			);
@@ -430,6 +438,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Nest/PrefixHeader.pch;
 				INFOPLIST_FILE = Nest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,6 +454,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Nest/PrefixHeader.pch;
 				INFOPLIST_FILE = Nest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

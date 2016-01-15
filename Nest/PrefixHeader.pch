@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  Nest
+//
+//  Created by ivanSamalazau on 15.1.16.
+//  Copyright © 2016 ScienceSoft. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define WEAKIFY_SELF    __weak typeof(self) weakSelf = self;
+#define STRONGIFY_SELF  typeof(weakSelf) self = weakSelf;
+
+
+#import "UIViewController+Alerts.h"
+#import <SVProgressHUD.h>
+
+#endif /* PrefixHeader_pch */

@@ -29,6 +29,8 @@ NSString *const kAccessTokenKey = @"AccessTokenKey";
 
 @implementation AuthManager
 
+@synthesize accessToken = _accessToken;
+
 + (NSString *)clientId
 {
     return kClientId;
@@ -69,15 +71,6 @@ NSString *const kAccessTokenKey = @"AccessTokenKey";
     return kState;
 }
 
-//- (BOOL)isValidSession
-//{
-//    if ([self accessToken]) {
-//        return true;
-//    } else {
-//        return false;
-//    }
-//}
-
 #pragma mark - Request
 
 - (void)requestAuthTokenWithSuccess:(void (^)(NSString *authToken))success failure:(void (^)(NSError *error))failure
@@ -117,23 +110,18 @@ NSString *const kAccessTokenKey = @"AccessTokenKey";
                   failure(error);
               }
           }];
-    
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    
-//    NSDictionary *params = @ {@"user" :txtUserName, @"pwd" :txtPwd };
-//    
-//    
-//    [manager POST:URL_SIGNIN parameters:params
-//          success:^(AFHTTPRequestOperation *operation, id responseObject)
-//    {
-//        NSLog(@"JSON: %@", responseObject);
-//    }
-//          failure:
-//     ^(AFHTTPRequestOperation *operation, NSError *error) {
-//         NSLog(@"Error: %@", error);
-//     }];
+}
+
+#pragma mark - Session
+
+- (BOOL)isValidSession
+{
+    return [self.accessToken isValid];
+}
+
+- (void)logout
+{
+    self.accessToken = nil;
 }
 
 #pragma mark - Singletone implementation
@@ -157,6 +145,37 @@ static AuthManager *sharedInstance;
 
 - (AccessToken *)accessToken
 {
+    if (_accessToken == nil) {
+        [self restoreAccessToken];
+    }
+    return _accessToken;
+}
+
+- (void)setAccessToken:(AccessToken *)accessToken
+{
+    _accessToken = accessToken;
+    [self storeAccessToken:accessToken];
+}
+
+#pragma mark - Store access token
+
+- (void)storeAccessToken:(AccessToken *)token
+{
+    if (token == nil) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kAccessTokenKey];
+        return;
+    }
+    
+    NSError *error = nil;
+    NSDictionary *tokenDict = [MTLJSONAdapter nonNullJSONDictionaryFromModel:token
+                                                                       error:&error];
+    NSAssert(tokenDict, @"%@", error.localizedDescription);
+    [[NSUserDefaults standardUserDefaults] setObject:tokenDict
+                                              forKey:kAccessTokenKey];
+}
+
+- (AccessToken *)restoreAccessToken
+{
     NSDictionary *tokenDict = [[NSUserDefaults standardUserDefaults] objectForKey:kAccessTokenKey];
     if (tokenDict) {
         NSError *error = nil;
@@ -168,20 +187,6 @@ static AuthManager *sharedInstance;
     }
     return nil;
 }
-
-- (void)setAccessToken:(AccessToken *)accessToken
-{
-    if (accessToken == nil) {
-        return;
-    }
-    
-    NSError *error = nil;
-    NSDictionary *tokenDict = [MTLJSONAdapter JSONDictionaryFromModel:accessToken error:&error];
-    NSAssert(tokenDict, @"%@", error.localizedDescription);
-    
-    [[NSUserDefaults standardUserDefaults] setObject:tokenDict forKey:kAccessTokenKey];
-}
-
 
 
 

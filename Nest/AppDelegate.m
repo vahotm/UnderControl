@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AuthManager.h"
+
 #import <AFNetworkActivityIndicatorManager.h>
 
 
@@ -20,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+
     
     return YES;
 }
