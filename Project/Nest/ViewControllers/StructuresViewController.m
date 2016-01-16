@@ -71,7 +71,21 @@ NSString *const kStructuresCellReuseId = @"CellReuseId";
     Structure *structure = self.structures[indexPath.row];
     
     cell.textLabel.text = structure.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Away status: %@", [structure awayStatusStringRepresentation]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [structure awayStatusStringRepresentation]];
+    switch (structure.awayStatus) {
+        case StructureAwayStatusHome: {
+            cell.detailTextLabel.textColor = [UIColor colorWithRed:0.3 green:0.8 blue:0.3 alpha:1];
+            break;
+        }
+        case StructureAwayStatusAway: {
+            cell.detailTextLabel.textColor = [UIColor colorWithRed:0.9 green:0.2 blue:0.3 alpha:1];
+            break;
+        }
+        case StructureAwayStatusAutoAway: {
+            cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+            break;
+        }
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

@@ -75,15 +75,15 @@
     NSString *string = nil;
     switch (self.awayStatus) {
         case StructureAwayStatusHome: {
-            string = @"at home";
+            string = @"At home";
             break;
         }
         case StructureAwayStatusAway: {
-            string = @"away";
+            string = @"Away";
             break;
         }
         case StructureAwayStatusAutoAway: {
-            string = @"auto-away";
+            string = @"Auto-away";
             break;
         }
     }

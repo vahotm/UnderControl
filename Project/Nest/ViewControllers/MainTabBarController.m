@@ -62,6 +62,7 @@
 
 - (void)finishAuthFlow
 {
+    [self setSelectedIndex:0];
     [self dismissViewControllerAnimated:YES completion:nil];
     [FirebaseManager sharedManager];
 }
