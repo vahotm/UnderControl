@@ -26,6 +26,7 @@ NSString *const kFirebaseThermostatsPath = @"devices/thermostats";
 @property (nonatomic, strong) Firebase *database;
 @property (nonatomic, strong) NSMutableDictionary *subscribedURLs;
 @property (nonatomic, strong) NSMutableDictionary *childDatabases;
+@property (nonatomic, strong) NSMutableDictionary *firebaseHandlers;
 @end
 
 
@@ -53,6 +54,7 @@ static FirebaseManager *sharedInstance;
     if (self) {
         self.subscribedURLs = [[NSMutableDictionary alloc] init];
         self.childDatabases = [[NSMutableDictionary alloc] init];
+        self.firebaseHandlers = [[NSMutableDictionary alloc] init];
         self.database = [[Firebase alloc] initWithUrl:kFirebaseUrl];
         
         WEAKIFY_SELF
@@ -84,6 +86,7 @@ static FirebaseManager *sharedInstance;
                       } withCancelBlock:^(NSError *error) {
                           
                           [SVProgressHUD dismiss];
+                          [SVProgressHUD showErrorWithStatus:error.localizedDescription];
                       }];
     }
     return self;
@@ -99,19 +102,22 @@ static FirebaseManager *sharedInstance;
     } else {
         Firebase *newFirebase = [self.database childByAppendingPath:URL];
         
-        [newFirebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        FirebaseHandle handle = [newFirebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
             [self.subscribedURLs setObject:snapshot forKey:URL];
             block(snapshot.value);
         }];
         
         [self.childDatabases setObject:newFirebase forKey:URL];
-        
+        [self.firebaseHandlers setObject:@(handle) forKey:URL];
     }
 }
 
 - (void)removeSubscriptionToURL:(NSString *)URL
 {
     [self.subscribedURLs removeObjectForKey:URL];
+    FirebaseHandle handle = [self.firebaseHandlers[URL] integerValue];
+    Firebase *firebase = self.childDatabases[URL];
+    [firebase removeObserverWithHandle:handle];
 }
 
 - (void)setValues:(NSDictionary *)values forURL:(NSString *)URL
