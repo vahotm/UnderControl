@@ -122,6 +122,13 @@ NSString *const kAccessTokenKey = @"AccessTokenKey";
 - (void)logout
 {
     self.accessToken = nil;
+    
+    //  Clear cookies
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *cookie in [storage cookies])
+    {
+        [storage deleteCookie:cookie];
+    }
 }
 
 #pragma mark - Singletone implementation
