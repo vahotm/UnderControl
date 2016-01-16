@@ -9,6 +9,8 @@ target 'Nest' do
     pod 'RequestUtils', '~> 1.1'
     pod 'Mantle'
     pod 'SVProgressHUD'
-    
+#    pod 'NMRangeSlider', '~> 1.2'
+    pod 'MARKRangeSlider', '~> 1.0'
+
 end
 

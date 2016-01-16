@@ -9,10 +9,11 @@
 #import "MainTabBarController.h"
 #import "AuthManager.h"
 #import "LoginViewController.h"
+//#import "ThermostatDetailsViewController.h"
+#import "FirebaseManager.h"
 
 
 @interface MainTabBarController () <LoginViewControllerDelegate>
-@property (nonatomic, assign) BOOL preventAuthFlow;
 @end
 
 
@@ -28,10 +29,11 @@
 {
     [super viewDidAppear:animated];
     
-    if (!self.preventAuthFlow &&
-        ![[AuthManager sharedManager] isValidSession])
-    {
+    if (![[AuthManager sharedManager] isValidSession]) {
         [self showLoginControllerAnimated:NO];
+    }
+    else {
+        [FirebaseManager sharedManager];
     }
 }
 
@@ -59,13 +61,19 @@
                      }];
 }
 
+- (void)finishAuthFlow
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+//    if ([self.selectedViewController isKindOfClass:[ThermostatDetailsViewController class]]) {
+//        [(ThermostatDetailsViewController *)self.selectedViewController startLoadingData];
+//    }
+    [FirebaseManager sharedManager];
+}
+
 #pragma mark - LoginViewControllerDelegate
 
 - (void)loginViewController:(LoginViewController *)loginVC didFoundAuthCode:(NSString *)authCode withState:(NSString *)state
 {
-    self.preventAuthFlow = YES;
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    
     if ([state isEqualToString:[AuthManager state]] &&
         authCode != nil)
     {
@@ -78,26 +86,23 @@
             
             STRONGIFY_SELF
             [SVProgressHUD dismiss];
-            self.preventAuthFlow = NO;
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self finishAuthFlow];
         } failure:^(NSError *error) {
             
             STRONGIFY_SELF
             [SVProgressHUD dismiss];
-            self.preventAuthFlow = NO;
             [self showTryAgainAlertWithMessage:error.localizedDescription];
         }];
     }
     else {
-        self.preventAuthFlow = NO;
         [self showTryAgainAlertWithMessage:@"Cannot get auth code"];
     }
 }
 
-- (void)loginViewControllerDidCancelRequest:(LoginViewController *)loginVC
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (void)loginViewControllerDidCancelRequest:(LoginViewController *)loginVC
+//{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 #pragma mark - Public
 

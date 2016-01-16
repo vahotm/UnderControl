@@ -11,7 +11,7 @@
 #import "MainTabBarController.h"
 
 
-NSString *const kCellReuseId = @"ReuseId";
+NSString *const kProfileCellReuseId = @"ReuseId";
 
 
 typedef NS_ENUM(NSInteger, ProfileCell) {
@@ -35,7 +35,8 @@ typedef NS_ENUM(NSInteger, ProfileCell) {
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellReuseId];
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:kProfileCellReuseId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,7 +98,7 @@ typedef NS_ENUM(NSInteger, ProfileCell) {
 
 - (UITableViewCell *)cellForDescriptor:(ProfileCell)descriptor inTableView:(UITableView *)tableView
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseId];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kProfileCellReuseId];
     
     switch (descriptor) {
         case ProfileCellLogout: {

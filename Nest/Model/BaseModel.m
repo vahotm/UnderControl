@@ -10,4 +10,9 @@
 
 @implementation BaseModel
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
+    return @{};
+}
+
 @end

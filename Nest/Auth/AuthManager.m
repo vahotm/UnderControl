@@ -146,7 +146,7 @@ static AuthManager *sharedInstance;
 - (AccessToken *)accessToken
 {
     if (_accessToken == nil) {
-        [self restoreAccessToken];
+        _accessToken = [self restoreAccessToken];
     }
     return _accessToken;
 }
@@ -172,6 +172,7 @@ static AuthManager *sharedInstance;
     NSAssert(tokenDict, @"%@", error.localizedDescription);
     [[NSUserDefaults standardUserDefaults] setObject:tokenDict
                                               forKey:kAccessTokenKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (AccessToken *)restoreAccessToken
