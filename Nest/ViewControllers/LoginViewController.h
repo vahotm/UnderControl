@@ -12,7 +12,6 @@
 @class LoginViewController;
 @protocol LoginViewControllerDelegate <NSObject>
 
-- (void)loginViewControllerDidCancelRequest:(LoginViewController *)loginVC;
 - (void)loginViewController:(LoginViewController *)loginVC didFoundAuthCode:(NSString *)authCode withState:(NSString *)state;
 
 @end

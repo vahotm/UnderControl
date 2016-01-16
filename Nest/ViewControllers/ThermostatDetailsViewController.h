@@ -21,7 +21,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *targetTemp;
 @property (weak, nonatomic) IBOutlet UILabel *currentTemp;
 
-//- (void)startLoadingData;
-
-
 @end

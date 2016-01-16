@@ -185,7 +185,6 @@ const float kMaxTemperatureC = 32;
 
 - (IBAction)onRangeSliderTouchUp:(MARKRangeSlider *)sender
 {
-//    [self submitTemperature];
     
 }
 

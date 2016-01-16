@@ -9,7 +9,6 @@
 #import "MainTabBarController.h"
 #import "AuthManager.h"
 #import "LoginViewController.h"
-//#import "ThermostatDetailsViewController.h"
 #import "FirebaseManager.h"
 
 
@@ -64,9 +63,6 @@
 - (void)finishAuthFlow
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-//    if ([self.selectedViewController isKindOfClass:[ThermostatDetailsViewController class]]) {
-//        [(ThermostatDetailsViewController *)self.selectedViewController startLoadingData];
-//    }
     [FirebaseManager sharedManager];
 }
 
@@ -98,11 +94,6 @@
         [self showTryAgainAlertWithMessage:@"Cannot get auth code"];
     }
 }
-
-//- (void)loginViewControllerDidCancelRequest:(LoginViewController *)loginVC
-//{
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
 
 #pragma mark - Public
 

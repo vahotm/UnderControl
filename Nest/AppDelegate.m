@@ -23,8 +23,6 @@
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
-
-    
     return YES;
 }
 

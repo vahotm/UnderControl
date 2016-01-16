@@ -87,40 +87,6 @@ static FirebaseManager *sharedInstance;
                           
                           [SVProgressHUD dismiss];
                       }];
-        
-//        [self.database authWithCustomToken:[AuthManager sharedManager].accessToken.token
-//                       withCompletionBlock:^(NSError *error, FAuthData *authData) {
-//                           STRONGIFY_SELF
-//                           [SVProgressHUD dismiss];
-//                           if (error != nil) {
-//                               [SVProgressHUD showErrorWithStatus:@"Failed to connect to Firebase"];
-//                           }
-//                           else {
-//                               [self.database observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-//                                   NSError *error = nil;
-////                                   NSDictionary *dict = snapshot.value;
-////                                   BOOL result = [dict writeToFile:@"/Users/ivansamalazau/Desktop/nestMock.plist" atomically:YES];
-//                                   State *state = [MTLJSONAdapter modelOfClass:[State class]
-//                                                            fromJSONDictionary:snapshot.value
-//                                                                         error:&error];
-//                                   NSAssert(state != nil, @"%@", error.localizedDescription);
-//                                   
-//                                   self.state = state;
-//                                   dispatch_async(dispatch_get_main_queue(), ^{
-//                                       [[NSNotificationCenter defaultCenter] postNotificationName:kFirebaseDidUpdateStateNotification
-//                                                                                           object:nil
-//                                                                                         userInfo:@{kFirebaseNotificationStateKey : self.state}];
-//                                   });
-//                               }];
-//                           }
-//                       }];
-
-//        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:@"/Users/ivansamalazau/Desktop/nestMock.plist"];
-//        NSError *error = nil;
-//        State *state = [MTLJSONAdapter modelOfClass:[State class]
-//                                 fromJSONDictionary:dict
-//                                              error:&error];
-//        NSAssert(state != nil, @"%@", error.localizedDescription);
     }
     return self;
 }
