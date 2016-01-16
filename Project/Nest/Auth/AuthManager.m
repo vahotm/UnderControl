@@ -78,7 +78,6 @@ NSString *const kAccessTokenKey = @"AccessTokenKey";
     NSAssert(self.authCode, @"Auth code mustn't be nil");
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
     NSDictionary *params = @{@"code" : self.authCode,

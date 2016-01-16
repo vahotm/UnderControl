@@ -67,8 +67,6 @@ static FirebaseManager *sharedInstance;
                           else {
                               [self.database observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
                                   NSError *error = nil;
-                                  //                                   NSDictionary *dict = snapshot.value;
-                                  //                                   BOOL result = [dict writeToFile:@"/Users/ivansamalazau/Desktop/nestMock.plist" atomically:YES];
                                   State *state = [MTLJSONAdapter modelOfClass:[State class]
                                                            fromJSONDictionary:snapshot.value
                                                                         error:&error];
