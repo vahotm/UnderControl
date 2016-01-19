@@ -177,7 +177,7 @@
         <!--Thermostat-->
         <scene sceneID="Zhu-Zk-THn">
             <objects>
-                <viewController storyboardIdentifier="ThermostatDetailsViewController" title="Thermostat" id="jfI-gx-6cy" customClass="ThermostatDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThermostatDetailsViewController" title="Thermostat" automaticallyAdjustsScrollViewInsets="NO" id="jfI-gx-6cy" customClass="ThermostatDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S7s-NA-Il5"/>
                         <viewControllerLayoutGuide type="bottom" id="Zd6-89-Bdi"/>
