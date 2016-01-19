@@ -32,12 +32,6 @@
 		2039A7741C495A0F00CC5BC5 /* MTLValueTransformer+PseudoArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2039A7731C495A0F00CC5BC5 /* MTLValueTransformer+PseudoArray.m */; };
 		2039A7771C4A5D3000CC5BC5 /* StructuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2039A7761C4A5D3000CC5BC5 /* StructuresViewController.m */; };
 		2039A77A1C4A636500CC5BC5 /* ThermostatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2039A7791C4A636500CC5BC5 /* ThermostatsTableViewController.m */; };
-		2039A77C1C4A79CF00CC5BC5 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2039A77B1C4A79CF00CC5BC5 /* Firebase.framework */; };
-		2039A77E1C4A7A3700CC5BC5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2039A77D1C4A7A3700CC5BC5 /* CFNetwork.framework */; };
-		2039A7801C4A7A3D00CC5BC5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2039A77F1C4A7A3D00CC5BC5 /* Security.framework */; };
-		2039A7821C4A7A4500CC5BC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2039A7811C4A7A4500CC5BC5 /* SystemConfiguration.framework */; };
-		2039A7841C4A7B4B00CC5BC5 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2039A7831C4A7B4B00CC5BC5 /* libicucore.tbd */; };
-		2039A7861C4A7B5200CC5BC5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2039A7851C4A7B5200CC5BC5 /* libc++.tbd */; };
 		C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +85,6 @@
 		2039A7761C4A5D3000CC5BC5 /* StructuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructuresViewController.m; sourceTree = "<group>"; };
 		2039A7781C4A636500CC5BC5 /* ThermostatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermostatsTableViewController.h; sourceTree = "<group>"; };
 		2039A7791C4A636500CC5BC5 /* ThermostatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermostatsTableViewController.m; sourceTree = "<group>"; };
-		2039A77B1C4A79CF00CC5BC5 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = third_party/Firebase.framework; sourceTree = "<group>"; };
 		2039A77D1C4A7A3700CC5BC5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2039A77F1C4A7A3D00CC5BC5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2039A7811C4A7A4500CC5BC5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -107,13 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2039A7861C4A7B5200CC5BC5 /* libc++.tbd in Frameworks */,
-				2039A7841C4A7B4B00CC5BC5 /* libicucore.tbd in Frameworks */,
-				2039A7821C4A7A4500CC5BC5 /* SystemConfiguration.framework in Frameworks */,
-				2039A7801C4A7A3D00CC5BC5 /* Security.framework in Frameworks */,
-				2039A77E1C4A7A3700CC5BC5 /* CFNetwork.framework in Frameworks */,
 				C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */,
-				2039A77C1C4A79CF00CC5BC5 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +115,6 @@
 				2039A7811C4A7A4500CC5BC5 /* SystemConfiguration.framework */,
 				2039A77F1C4A7A3D00CC5BC5 /* Security.framework */,
 				2039A77D1C4A7A3700CC5BC5 /* CFNetwork.framework */,
-				2039A77B1C4A79CF00CC5BC5 /* Firebase.framework */,
 				5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */,
 			);
 			name = Frameworks;
@@ -534,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/third_party",
@@ -554,6 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/third_party",

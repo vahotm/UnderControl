@@ -10,6 +10,7 @@ target 'Nest' do
     pod 'Mantle'
     pod 'SVProgressHUD'
     pod 'MARKRangeSlider', '~> 1.0'
+    pod 'Firebase', '= 1.2.3'
 
 end
 
