@@ -79,10 +79,10 @@ NSString *const kThermostatsCellReuseId = @"CellReuseId";
             if (thermostat.ambientTemperature <= thermostat.targetTemperatureHigh &&
                 thermostat.ambientTemperature >= thermostat.targetTemperatureLow)
             {
-                color = [UIColor greenColor];
+                color = [UIColor customGreenColor];
             }
             else {
-                color = [UIColor redColor];
+                color = [UIColor customRedColor];
             }
         }
     }
@@ -91,10 +91,10 @@ NSString *const kThermostatsCellReuseId = @"CellReuseId";
         if (thermostat.ambientTemperature <= thermostat.awayTemperatureHigh &&
             thermostat.ambientTemperature >= thermostat.awayTemperatureLow)
         {
-            color = [UIColor greenColor];
+            color = [UIColor customGreenColor];
         }
         else {
-            color = [UIColor redColor];
+            color = [UIColor customRedColor];
         }
     }
     return color;
