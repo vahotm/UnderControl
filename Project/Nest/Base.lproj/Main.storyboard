@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xWz-0m-D66">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xWz-0m-D66">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -348,7 +348,7 @@
         <scene sceneID="5Iy-ZB-34U">
             <objects>
                 <navigationController id="0Nr-Gm-ATN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Devices" id="4nq-3F-2SI"/>
+                    <tabBarItem key="tabBarItem" title="Devices" image="home" id="4nq-3F-2SI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Af4-bA-poz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -365,7 +365,7 @@
         <scene sceneID="95n-Wj-qVd">
             <objects>
                 <navigationController id="QhB-ii-Pdc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="sCn-Ev-Xft"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="settings" id="sCn-Ev-Xft"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ypJ-zz-iDV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -379,4 +379,8 @@
             <point key="canvasLocation" x="847" y="1230"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="30" height="28"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
