@@ -24,6 +24,7 @@ NSString *const kThermostatsCellReuseId = @"CellReuseId";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tableView hideEmptySeparators];
 }
 
 

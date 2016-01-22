@@ -29,6 +29,7 @@ NSString *const kStructuresCellReuseId = @"CellReuseId";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tableView hideEmptySeparators];
 }
 
 - (void)viewWillAppear:(BOOL)animated
