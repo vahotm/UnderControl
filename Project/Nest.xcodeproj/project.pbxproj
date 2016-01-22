@@ -32,6 +32,7 @@
 		2039A7741C495A0F00CC5BC5 /* MTLValueTransformer+PseudoArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2039A7731C495A0F00CC5BC5 /* MTLValueTransformer+PseudoArray.m */; };
 		2039A7771C4A5D3000CC5BC5 /* StructuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2039A7761C4A5D3000CC5BC5 /* StructuresViewController.m */; };
 		2039A77A1C4A636500CC5BC5 /* ThermostatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2039A7791C4A636500CC5BC5 /* ThermostatsTableViewController.m */; };
+		205CA99D1C5266F400D73F37 /* UITableView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 205CA99C1C5266F400D73F37 /* UITableView+Utils.m */; };
 		C34F3DEAD5DE7195596925AD /* libPods-Nest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,8 @@
 		2039A7811C4A7A4500CC5BC5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2039A7831C4A7B4B00CC5BC5 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2039A7851C4A7B5200CC5BC5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		205CA99B1C5266F400D73F37 /* UITableView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Utils.h"; sourceTree = "<group>"; };
+		205CA99C1C5266F400D73F37 /* UITableView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Utils.m"; sourceTree = "<group>"; };
 		3AF5F20CE1DD94DA1A836ACC /* Pods-Nest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB6B5B8DD6115126CA35184 /* libPods-Nest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30279169605DB52286435E2 /* Pods-Nest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nest/Pods-Nest.release.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				2007CB7E1C480ED300E8B154 /* UIViewController+Alerts.m */,
 				2039A7691C4953D500CC5BC5 /* NSDateFormatter+ISO8601.h */,
 				2039A76A1C4953D500CC5BC5 /* NSDateFormatter+ISO8601.m */,
+				205CA99B1C5266F400D73F37 /* UITableView+Utils.h */,
+				205CA99C1C5266F400D73F37 /* UITableView+Utils.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 			files = (
 				2007CB6D1C4805B000E8B154 /* BaseModel.m in Sources */,
 				2007CB661C47D24300E8B154 /* AuthManager.m in Sources */,
+				205CA99D1C5266F400D73F37 /* UITableView+Utils.m in Sources */,
 				2007CB991C49416200E8B154 /* Thermostat.m in Sources */,
 				2039A76E1C49553700CC5BC5 /* State.m in Sources */,
 				2007CB741C4805E400E8B154 /* AccessToken.m in Sources */,
