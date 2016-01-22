@@ -99,6 +99,7 @@ NSString *const kStructuresCellReuseId = @"CellReuseId";
     Structure *structure = self.structures[indexPath.row];
     ThermostatsTableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ThermostatsTableViewController"];
     vc.thermostats = structure.thermostats;
+    vc.awayStatus = structure.awayStatus;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

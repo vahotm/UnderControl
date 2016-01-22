@@ -8,6 +8,7 @@
 
 #import "ThermostatsTableViewController.h"
 #import "Thermostat.h"
+
 #import "ThermostatDetailsViewController.h"
 
 
@@ -47,7 +48,11 @@ NSString *const kThermostatsCellReuseId = @"CellReuseId";
     Thermostat *thermostat = self.thermostats[indexPath.row];
     
     cell.textLabel.text = thermostat.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.1f %@", [thermostat ambientTemperature], [thermostat stringFromTemperatureScale]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.1f %@",
+                                 [thermostat ambientTemperature],
+                                 [thermostat stringFromTemperatureScale]];
+    cell.detailTextLabel.textColor = [self colorForTemperatureLabelForThermostat:thermostat
+                                                                      awayStatus:self.awayStatus];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -62,5 +67,38 @@ NSString *const kThermostatsCellReuseId = @"CellReuseId";
     vc.thermostatId = thermostat.deviceId;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark - Private
+
+- (UIColor *)colorForTemperatureLabelForThermostat:(Thermostat *)thermostat awayStatus:(StructureAwayStatus)awayStatus
+{
+    UIColor *color = [UIColor lightGrayColor];
+    
+    if (awayStatus == StructureAwayStatusHome) {
+        if (thermostat.hvacMode == HVACModeHeatCool) {
+            if (thermostat.ambientTemperature <= thermostat.targetTemperatureHigh &&
+                thermostat.ambientTemperature >= thermostat.targetTemperatureLow)
+            {
+                color = [UIColor greenColor];
+            }
+            else {
+                color = [UIColor redColor];
+            }
+        }
+    }
+    else if (awayStatus == StructureAwayStatusAway) {
+        //  Maybe add check for HVACModeHeatCool?
+        if (thermostat.ambientTemperature <= thermostat.awayTemperatureHigh &&
+            thermostat.ambientTemperature >= thermostat.awayTemperatureLow)
+        {
+            color = [UIColor greenColor];
+        }
+        else {
+            color = [UIColor redColor];
+        }
+    }
+    return color;
+}
+
 
 @end
