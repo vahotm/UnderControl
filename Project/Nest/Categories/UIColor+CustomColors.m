@@ -27,12 +27,12 @@
 
 + (instancetype)customRedColor
 {
-    return [self colorWithRed:0.9 green:0.2 blue:0.3 alpha:1];
+    return [self colorWithRGBHex:0xC41A16];
 }
 
 + (instancetype)customGreenColor
 {
-    return [self colorWithRGBHex:0x18a91b];
+    return [self colorWithRGBHex:0x007400];
 }
 
 @end
